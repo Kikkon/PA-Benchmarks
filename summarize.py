@@ -98,12 +98,12 @@ def print_graph():
     for key, value in grouped:
         df = pd.DataFrame(value)
         sns.pointplot(x="Size", y="Time",  hue="Engine", data=df, label="test")
-        plt.title("Type = {}, Task = {}, Is compressed = {}, ".format(
+        plt.title("Type = {}, Task = {}, Is compressed = {}".format(
             key[0], key[1],  key[4]))
         # plt.show()
         f = plt.gcf()
         f.savefig(
-            r'target/{}'.format("{}-{}-{}, ".format(key[0], key[1],  key[4])))
+            r'target/{}'.format("{}-{}-{}".format(key[0], key[1],  key[4])))
         f.clear()
 
 
